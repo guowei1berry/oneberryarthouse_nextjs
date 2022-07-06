@@ -17,7 +17,7 @@ const Counter = (props) => {
     <div>
       <Link href={`/posts/${counted}`} >
         <a className={styles.card}>
-          <h2>counted&rarr;</h2>
+          {/* <h2>counted&rarr;</h2> */}
 
           data: ${counted}
 

@@ -110,6 +110,8 @@ export default function Home() {
         </button>
       </a>
         <Counter count={counts}  />
+
+
         </div>
       </main>
 
