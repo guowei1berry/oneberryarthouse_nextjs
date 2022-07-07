@@ -5,18 +5,28 @@ import Link from 'next/link'
 import Counter from '../components/Counter'
 
 import { useState } from 'react'
+import Layout from '../components/Layout'
+import { Button } from '../components/Button'
 
 export default function Home() {
   const [counts, setCounts] = useState([])
+  const [bool, setBool] = useState(true)
 
   const add = () =>{
 
     var add = counts
     add++
     setCounts(add)
+  } 
+  
+  const render = () =>{
+      setBool(!bool)
+      console.log(bool)
   }
 
+
   return (
+    <Layout home>
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -93,6 +103,14 @@ export default function Home() {
         </p>
       </a>
         </Link>
+        <Link href="/posts/thirdpost" >
+      <a className={styles.card}>
+        <h2>thirdpost&rarr;</h2>
+        <p>
+          Third Post
+        </p>
+      </a>
+        </Link>
       
         <Link href="/posts/1" >
       <a className={styles.card}>
@@ -113,8 +131,10 @@ export default function Home() {
 
 
         </div>
+
       </main>
 
+      <Button renderClick={() =>render()}/>
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -127,6 +147,11 @@ export default function Home() {
           </span>
         </a>
       </footer>
+
     </div>
+
+
+
+    </Layout>
   )
 }
