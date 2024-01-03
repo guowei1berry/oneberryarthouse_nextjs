@@ -1,95 +1,85 @@
-import Image from 'next/image'
-import styles from './page.module.css'
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+import Link from "next/link";
+import { useRouter } from 'next/navigation'
+// import { useEffect, useState } from "react";
+import Testrouterobject from "./Testrouterobject";
+import HomePage from './home-page'
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+export default function Page() {
+    // const router = useRouter()
+    // const [counter, iscounter] = useState(0)
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+    // const count1 = () =>{
+    //     iscounter(counter+1)
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+    // }
+    return(
+      <>
+      <HomePage/>
+      </>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+    )
+  }
+//   return (
+//     <div>
+//       <div
+//         className="d-flex justify-content-center align-items-center"
+//         style={{ minHeight: "100vh" }}
+//       >
+//         <div>
+//           <div>
+//             <h1 className="fw-bolder" style={{ fontSize: "60px" }}>
+//               Null City.
+//             </h1>
+//             13 January, 2022
+//           </div>
+//           <div className="d-flex justify-content-between align-items-center mt-4">
+//             <div className="pe-5">
+//               <h2 className="d-inline">0</h2>
+//               <sup>°C</sup>
+//               <p className="text-info">Cloudy</p>
+//             </div>
+//             <div>
+//               {/* <img src="/1.png" alt="" width={100} draggable="false" /> */}
+//             </div>
+//           </div>
+//           <HomePage />
+//           <hr />
+//           <div className="d-md-flex justify-content-between align-items-center mt-4">
+//           <Link href="/timestamp">
+//             <button className="btn btn-success border-0 save-btn px-4 py-3">
+//              Timestamp
+//             </button>
+//             </Link>
+//             <Link href="/history">
+//               <button className="btn btn-danger border-0 history-btn px-4 py-3 ms-auto">
+//                 My History
+//               </button>
+//             </Link>
+//             <Link href="/nested/imnested">
+//               <button className="btn btn-danger border-0 history-btn px-4 py-3 ms-auto">
+//                 Go nested
+//               </button>
+//             </Link>
+//             <Link href="/nested/:slug">
+//               <button className="btn btn-danger border-0 history-btn px-4 py-3 ms-auto">
+//                 dynamic slug
+//               </button>
+//             </Link>
+//             <Link href="/useuser">
+//               <button className="btn btn-danger border-0 history-btn px-4 py-3 ms-auto">
+//               useuser
+//               </button>
+//             </Link>
+//             <button type="button" onClick={() => router.push('/about')}>
+//            router.push //userouter
+//             </button>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+//             <Testrouterobject href={counter} countchild={counter} />
+//             <button onClick={count1}> click here ={counter} </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
