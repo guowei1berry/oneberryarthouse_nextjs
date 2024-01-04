@@ -1,16 +1,16 @@
 'use client'
- 
-import Link from "next/link";
+import { Link } from '@chakra-ui/next-js'
+import { Button, ButtonGroup } from '@chakra-ui/react'
+// import Link from "next/link";
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from "react";
-import Testrouterobject from "./Testrouterobject";
 
 
 // This is a Client Component. It receives data as props and
 // has access to state and effects just like Page components
 // in the `pages` directory.
 export default function HomePage() {
-    const router = useRouter()
+
     const [counter, iscounter] = useState(0)
 
     const count1 = () =>{
@@ -57,7 +57,7 @@ export default function HomePage() {
                 Go nested
               </button>
             </Link>
-            <Link href="/nested/:slug">
+            <Link href={`/dynamic/${counter}`} >
               <button className="btn btn-danger border-0 history-btn px-4 py-3 ms-auto">
                 dynamic slug
               </button>
@@ -67,12 +67,8 @@ export default function HomePage() {
               useuser
               </button>
             </Link>
-            <button type="button" onClick={() => router.push('/about')}>
-           router.push //userouter
-            </button>
 
-            {/* <Testrouterobject href={counter} countchild={counter} /> */}
-            <button onClick={count1}> click here ={counter} </button>
+            <Button onClick={count1}> click here ={counter} </Button>
           </div>
         </div>
       </div>
