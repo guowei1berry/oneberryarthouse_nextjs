@@ -1,7 +1,7 @@
 'use client'
-import { Link } from '@chakra-ui/next-js'
-import { Button, ButtonGroup } from '@chakra-ui/react'
-// import Link from "next/link";
+// import { Link } from '@chakra-ui/next-js'
+// import { Button, ButtonGroup } from '@chakra-ui/react'
+import Link from "next/link";
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from "react";
 
@@ -15,6 +15,7 @@ export default function HomePage() {
 
     const count1 = () =>{
         iscounter(counter+1)
+        console.log(counter)
     }
 
   return (
@@ -67,8 +68,9 @@ export default function HomePage() {
               useuser
               </button>
             </Link>
+            <h1 className="text-3xl font-bold underline"> testing here</h1>
 
-            <Button onClick={count1}> click here ={counter} </Button>
+            <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={count1}> click here ={counter} </button>
           </div>
         </div>
       </div>
