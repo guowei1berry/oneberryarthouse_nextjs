@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from "react";
-
+import DecorCard from "./components/card";
 
 // This is a Client Component. It receives data as props and
 // has access to state and effects just like Page components
@@ -53,6 +53,9 @@ export default function HomePage() {
                 My History
               </button>
             </Link>
+
+            <DecorCard/>
+
             <Link href="/nested/imnested">
               <button className="btn btn-danger border-0 history-btn px-4 py-3 ms-auto">
                 Go nested
