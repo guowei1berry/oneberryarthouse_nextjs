@@ -5,7 +5,8 @@ import Link from "next/link";
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from "react";
 import DecorCard from "./components/card";
-
+import VideoPlayerComp from "./components/videoplayer";
+import video from './assets'
 // This is a Client Component. It receives data as props and
 // has access to state and effects just like Page components
 // in the `pages` directory.
@@ -20,6 +21,8 @@ export default function HomePage() {
 
   return (
     <div>
+      
+      <VideoPlayerComp url="https://www.youtube.com/watch?v=N8ztlNMtwUU"/>
       <div
         className="d-flex justify-content-center align-items-center"
         style={{ minHeight: "100vh" }}
@@ -80,3 +83,4 @@ export default function HomePage() {
     </div>
   )
 }
+

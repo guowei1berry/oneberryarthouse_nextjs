@@ -11,8 +11,12 @@ export default function Page() {
 
 
       </video> */}
+            {/* <video autoPlay style={{ width: '500px', height: '500px' }}>
+        <source src={video} />
+      </video> */}
       <HomePage/>
       </>
 
     )
   }
+
