@@ -11,6 +11,8 @@ import { Button } from '../components/Button'
 import ScrollToTop from '../components/ScrollToTop'
 import scrollIntoView from 'scroll-into-view-if-needed'
 
+import DecorCard from './posts/card'
+
 export default function Home() {
   const [counts, setCounts] = useState([])
   const titleRef = useRef()
@@ -44,6 +46,7 @@ export default function Home() {
           <a>secondpost</a>
         </Link>
       </li>
+      <DecorCard/>
     </ul>
 
       <main className={styles.main}>
